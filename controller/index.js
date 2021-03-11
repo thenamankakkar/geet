@@ -11,9 +11,11 @@ module.exports = {
     },
     readSingle: (req, res) => {
         let id = req.params.id;
+        let array =[];
         Course.findById({_id: id}, (err, result) => {
             if (err) assert.deepStrictEqual(null, err);
-            res.json(result);
+            array.push(result)
+            res.json(array);
         });
     },
 };
