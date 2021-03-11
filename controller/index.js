@@ -9,4 +9,11 @@ module.exports = {
             res.json(result);
         });
     },
+    readSingle: (req, res) => {
+        let id = req.params.id;
+        Course.findById({_id: id}, (err, result) => {
+            if (err) assert.deepStrictEqual(null, err);
+            res.json(result);
+        });
+    },
 };
