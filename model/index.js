@@ -1,3 +1,7 @@
 module.exports={
-    course: require('./course.model')
+    course: require('./course.model'),
+    baani: require('./baani.model'),
+    karan: require('./karan.model'),
+    afsana: require('./afsana.model'),
+    sunanda: require('./sunanda.model'),
 };
