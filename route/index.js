@@ -18,5 +18,8 @@ cRoute.route('/afsana/:id').get(courseController.afsanasingle);
 cRoute.route('/sunanda').get(courseController.sunanda);
 cRoute.route('/sunanda/:id').get(courseController.sunandasingle);
 
+cRoute.route('/trending').get(courseController.trending);
+cRoute.route('/trending/:id').get(courseController.trendingsingle);
+
 
 module.exports = cRoute;

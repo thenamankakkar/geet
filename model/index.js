@@ -4,4 +4,5 @@ module.exports={
     karan: require('./karan.model'),
     afsana: require('./afsana.model'),
     sunanda: require('./sunanda.model'),
+    trending: require('./trending.model'),
 };

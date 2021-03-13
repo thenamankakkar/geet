@@ -4,6 +4,7 @@ const Baani = require('../model').baani;
 const Karan = require('../model').karan;
 const Afsana = require('../model').afsana;
 const Sunanda = require('../model').sunanda;
+const Trending = require('../model').trending;
 
 module.exports = {
     /*songs*/
@@ -95,4 +96,21 @@ module.exports = {
         });
     },
 
+    /*trending*/
+    trending: (req, res) => {
+        // to read all data
+        Trending.find((err, result) => {
+            if (err) assert.deepStrictEqual(null, err);
+            res.json(result);
+        });
+    },
+    trendingsingle: (req, res) => {
+        let id = req.params.id;
+        let array = [];
+        Trending.findById({_id: id}, (err, result) => {
+            if (err) assert.deepStrictEqual(null, err);
+            array.push(result);
+            res.json(array);
+        });
+    },
 };
