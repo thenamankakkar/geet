@@ -5,6 +5,7 @@ const Karan = require('../model').karan;
 const Afsana = require('../model').afsana;
 const Sunanda = require('../model').sunanda;
 const Trending = require('../model').trending;
+const Geetone = require('../model').geetone;
 
 module.exports = {
     /*songs*/
@@ -111,6 +112,15 @@ module.exports = {
             if (err) assert.deepStrictEqual(null, err);
             array.push(result);
             res.json(array);
+        });
+    },
+
+    /*geetone*/
+    geetone: (req, res) => {
+        // to read all data
+        Geetone.find((err, result) => {
+            if (err) assert.deepStrictEqual(null, err);
+            res.json(result);
         });
     },
 };

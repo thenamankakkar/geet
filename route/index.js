@@ -21,5 +21,6 @@ cRoute.route('/sunanda/:id').get(courseController.sunandasingle);
 cRoute.route('/trending').get(courseController.trending);
 cRoute.route('/trending/:id').get(courseController.trendingsingle);
 
+cRoute.route('/geetone').get(courseController.geetone);
 
 module.exports = cRoute;

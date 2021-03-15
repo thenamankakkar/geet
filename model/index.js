@@ -5,4 +5,5 @@ module.exports={
     afsana: require('./afsana.model'),
     sunanda: require('./sunanda.model'),
     trending: require('./trending.model'),
+    geetone: require('./geetone.model'),
 };
